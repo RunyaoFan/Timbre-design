@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="favicon.ico" />
+  <title>Timbre - Client App V1</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <a href="/"><img src="logo.jpeg"></a>
+
+    <form class="form-inline my-2 my-lg-0 ml-auto">
+      <input class="form-control mr-sm-2 input-large" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+
+    <div class="ml-auto">
+      <a href="/login"><span class="btn btn-outline-primary mr-2" href="#">Sign in</span></a>
+      <a href="/register"><span class="btn btn-primary" href="#">Sign up</span></a>
+    </div>
+
+  </nav>
+  <div class="row">
+    <div class="col-md-8">
+      <ul class="nav nav-pills mb-3 bg-white px-2 py-2 round sections" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation"><a class="nav-link active" id="pills-profile-tab" data-toggle="pill" href="#pills-popular" role="tab" aria-controls="pills-profile" aria-selected="true"><i class="fas fa-fire"></i>Popular</a></li>
+        <li class="nav-item" role="presentation"><a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-latest" role="tab" aria-controls="pills-home" aria-selected="false"><i class="fas fa-clock"></i>Latest</a></li>
+        <li class="nav-item" role="presentation"><a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-controversial" role="tab" aria-controls="pills-home" aria-selected="false"><i class="fas fa-exclamation"></i>Controversial</a>
+        </li>
+        <li class="nav-item" role="presentation"><a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-foryou" role="tab" aria-controls="pills-home" aria-selected="false"><i class="fas fa-user"></i>For You</a></li>
+        <li class="nav-item" role="presentation"><a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-world" role="tab" aria-controls="pills-home" aria-selected="false"><i class="fas fa-newspaper"></i>World News</a></li>
+        <li class="nav-item" role="presentation"><a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-politics" role="tab" aria-controls="pills-home" aria-selected="false"><i class="fas fa-landmark"></i>Politics</a></li>
+        <li class="nav-item ml-auto" role="presentation"><a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-raw" role="tab" aria-controls="pills-home" aria-selected="false">Raw</a></li>
+      </ul>
+    </div>
+
+    <div class="col-md-4">
+      <!-- blockchain stats section -->
+      <div class="card-body round">
+        <h5 class="card-title">Blockchain Statistics</h5>
+        <div>
+          <ul class="list-group mb-3">
+            <li class="text-small list-group-item d-flex justify-content-between align-items-center">Height: <strong>50950</strong></li>
+            <li class="list-group-item d-flex justify-content-between align-items-center"><small class="overflow-auto">Block #50950 &lt;9bd6dca24cfb64791381b782d9cf75c6e2c78cacccf0b73216824bc74198c01c&gt;</small></li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">Forks: <strong>1</strong></li><a href="/explorer"><span class="btn btn-block btn-primary mt-3">BLOCKCHAIN EXPLORER</span></a>
+          </ul>
+        </div>
+      </div>
+
+      <!-- trending communities section -->
+      <div class="card-body round subforums">
+        <h5 class="card-title">Trending Communities</h5>
+
+        <div class="row subforum">
+          <div class="col-1 forum-info">
+            <img src="smile.png" class="forum-img" alt="">
+          </div>
+          <div class="col-6 name-cnt">
+            <div class="row forum-info">
+              <p class="forum-info forum-name">Subforum1</p>
+            </div>
+            <div class="row forum-info">
+              <p class="forum-info member-cnt">0 Members</p>
+            </div>
+          </div>
+          <div class="col-5">
+            <a class="btn btn-primary forum-btn" href="#" role="button">Join</a>
+          </div>
+        </div>
+
+        <div class="row subforum">
+          <div class="col-1 forum-info">
+            <img src="smile.png" class="forum-img" alt="">
+          </div>
+          <div class="col-6 name-cnt">
+            <div class="row forum-info">
+              <p class="forum-info forum-name">Subforum1</p>
+            </div>
+            <div class="row forum-info">
+              <p class="forum-info member-cnt">0 Members</p>
+            </div>
+          </div>
+          <div class="col-5">
+            <a class="btn btn-primary forum-btn" href="#" role="button">Join</a>
+          </div>
+        </div>
+
+        <div class="row subforum">
+          <div class="col-1 forum-info">
+            <img src="smile.png" class="forum-img" alt="">
+          </div>
+          <div class="col-6 name-cnt">
+            <div class="row forum-info">
+              <p class="forum-info forum-name">Subforum1</p>
+            </div>
+            <div class="row forum-info">
+              <p class="forum-info member-cnt">0 Members</p>
+            </div>
+          </div>
+          <div class="col-5">
+            <a class="btn btn-primary forum-btn" href="#" role="button">Join</a>
+          </div>
+        </div>
+
+        <div class="row subforum">
+          <div class="col-1 forum-info">
+            <img src="smile.png" class="forum-img" alt="">
+          </div>
+          <div class="col-6 name-cnt">
+            <div class="row forum-info">
+              <p class="forum-info forum-name">Subforum1</p>
+            </div>
+            <div class="row forum-info">
+              <p class="forum-info member-cnt">0 Members</p>
+            </div>
+          </div>
+          <div class="col-5">
+            <a class="btn btn-primary forum-btn" href="#" role="button">Join</a>
+          </div>
+        </div>
+
+        <div class="row subforum">
+          <div class="col-1 forum-info">
+            <img src="smile.png" class="forum-img" alt="">
+          </div>
+          <div class="col-6 name-cnt">
+            <div class="row forum-info">
+              <p class="forum-info forum-name">Subforum1</p>
+            </div>
+            <div class="row forum-info">
+              <p class="forum-info member-cnt">0 Members</p>
+            </div>
+          </div>
+          <div class="col-5">
+            <a class="btn btn-primary forum-btn" href="#" role="button">Join</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <script src="https://kit.fontawesome.com/6fad3641f2.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <script src="index.js" charset="utf-8"></script>
+</body>
+
+
+</html>
