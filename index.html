@@ -5,146 +5,293 @@
   <meta charset="utf-8">
   <link rel="icon" href="favicon.ico" />
   <title>Timbre - Client App V1</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Noto+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light timbre-nav sticky-top">
+    <div class="logo-section">
+      <a href="/"><img src="logo.jpeg" class="timbre-logo"></a>
+    </div>
+    <div class="searchbar-section">
+      <form class="form-inline my-2 my-lg-0 ml-auto">
+        <label for=""><i class="fas fa-search search-icon"></i></label>
+        <input class="searchbar form-control mr-sm-2 input-large " type="search" placeholder="Search" aria-label="Search">
+      </form>
+    </div>
 
-    <a href="/"><img src="logo.jpeg"></a>
+    <div class="log-btns">
+      <a href="/login"><span class="btn mr-2 nav-btns btn-1" href="#">LOG IN</span></a>
+      <a href="/register"><span class="btn nav-btns btn-2" href="#">SIGN UP</span></a>
+    </div>
 
-    <form class="form-inline my-2 my-lg-0 ml-auto">
-      <input class="form-control mr-sm-2 input-large" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-
-    <div class="ml-auto">
-      <a href="/login"><span class="btn btn-outline-primary mr-2" href="#">Sign in</span></a>
-      <a href="/register"><span class="btn btn-primary" href="#">Sign up</span></a>
+    <div class="dropdown">
+      <button class="btn btn-light dropdown-toggle nav-dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-user dropdown-icon dropdown-icon-1"></i><i class="fas fa-caret-down dropdown-icon"></i>
+      </button>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+      </div>
     </div>
 
   </nav>
-  <div class="row">
-    <div class="col-md-8">
-      <ul class="nav nav-pills mb-3 bg-white px-2 py-2 round sections" id="pills-tab" role="tablist">
-        <li class="nav-item" role="presentation"><a class="nav-link active" id="pills-profile-tab" data-toggle="pill" href="#pills-popular" role="tab" aria-controls="pills-profile" aria-selected="true"><i class="fas fa-fire"></i>Popular</a></li>
-        <li class="nav-item" role="presentation"><a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-latest" role="tab" aria-controls="pills-home" aria-selected="false"><i class="fas fa-clock"></i>Latest</a></li>
-        <li class="nav-item" role="presentation"><a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-controversial" role="tab" aria-controls="pills-home" aria-selected="false"><i class="fas fa-exclamation"></i>Controversial</a>
-        </li>
-        <li class="nav-item" role="presentation"><a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-foryou" role="tab" aria-controls="pills-home" aria-selected="false"><i class="fas fa-user"></i>For You</a></li>
-        <li class="nav-item" role="presentation"><a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-world" role="tab" aria-controls="pills-home" aria-selected="false"><i class="fas fa-newspaper"></i>World News</a></li>
-        <li class="nav-item" role="presentation"><a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-politics" role="tab" aria-controls="pills-home" aria-selected="false"><i class="fas fa-landmark"></i>Politics</a></li>
-        <li class="nav-item ml-auto" role="presentation"><a class="nav-link" id="pills-home-tab" data-toggle="pill" href="#pills-raw" role="tab" aria-controls="pills-home" aria-selected="false">Raw</a></li>
-      </ul>
+
+  <div class="container trending-today">
+
+    <div class="row">
+      <p class="trending-header">Trending today</p>
     </div>
 
-    <div class="col-md-4">
-      <!-- blockchain stats section -->
-      <div class="card-body round">
-        <h5 class="card-title">Blockchain Statistics</h5>
-        <div>
-          <ul class="list-group mb-3">
-            <li class="text-small list-group-item d-flex justify-content-between align-items-center">Height: <strong>50950</strong></li>
-            <li class="list-group-item d-flex justify-content-between align-items-center"><small class="overflow-auto">Block #50950 &lt;9bd6dca24cfb64791381b782d9cf75c6e2c78cacccf0b73216824bc74198c01c&gt;</small></li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">Forks: <strong>1</strong></li><a href="/explorer"><span class="btn btn-block btn-primary mt-3">BLOCKCHAIN EXPLORER</span></a>
-          </ul>
+    <div class="row">
+
+      <div class="col-md-3 sample-img">
+        <div class="card bg-dark text-white trending">
+          <img src="sample.png" class="card-img trending" alt="...">
+          <div class="card-img-overlay trending-text-all">
+            <h5 class="card-title trending-title">Title</h5>
+            <p class="card-text trending-text">A breif introduction of the topic.</p>
+            <div class="row no-margin">
+              <img src="smile.png" class="trending-group-img" alt="">
+              <p class="card-text trending-group">Name of group</p>
+            </div>
+
+          </div>
         </div>
       </div>
-
-      <!-- trending communities section -->
-      <div class="card-body round subforums">
-        <h5 class="card-title">Trending Communities</h5>
-
-        <div class="row subforum">
-          <div class="col-1 forum-info">
-            <img src="smile.png" class="forum-img" alt="">
-          </div>
-          <div class="col-6 name-cnt">
-            <div class="row forum-info">
-              <p class="forum-info forum-name">Subforum1</p>
+      <div class="col-md-3 sample-img">
+        <div class="card bg-dark text-white trending">
+          <img src="sample.png" class="card-img trending" alt="...">
+          <div class="card-img-overlay trending-text-all">
+            <h5 class="card-title trending-title">Title</h5>
+            <p class="card-text trending-text">A breif introduction of the topic.</p>
+            <div class="row no-margin">
+              <img src="smile.png" class="trending-group-img" alt="">
+              <p class="card-text trending-group">Name of group</p>
             </div>
-            <div class="row forum-info">
-              <p class="forum-info member-cnt">0 Members</p>
-            </div>
-          </div>
-          <div class="col-5">
-            <a class="btn btn-primary forum-btn" href="#" role="button">Join</a>
           </div>
         </div>
-
-        <div class="row subforum">
-          <div class="col-1 forum-info">
-            <img src="smile.png" class="forum-img" alt="">
-          </div>
-          <div class="col-6 name-cnt">
-            <div class="row forum-info">
-              <p class="forum-info forum-name">Subforum1</p>
+      </div>
+      <div class="col-md-3 sample-img">
+        <div class="card bg-dark text-white trending">
+          <img src="sample.png" class="card-img trending" alt="...">
+          <div class="card-img-overlay trending-text-all">
+            <h5 class="card-title trending-title">Title</h5>
+            <p class="card-text trending-text">A breif introduction of the topic.</p>
+            <div class="row no-margin">
+              <img src="smile.png" class="trending-group-img" alt="">
+              <p class="card-text trending-group">Name of group</p>
             </div>
-            <div class="row forum-info">
-              <p class="forum-info member-cnt">0 Members</p>
-            </div>
-          </div>
-          <div class="col-5">
-            <a class="btn btn-primary forum-btn" href="#" role="button">Join</a>
           </div>
         </div>
-
-        <div class="row subforum">
-          <div class="col-1 forum-info">
-            <img src="smile.png" class="forum-img" alt="">
-          </div>
-          <div class="col-6 name-cnt">
-            <div class="row forum-info">
-              <p class="forum-info forum-name">Subforum1</p>
+      </div>
+      <div class="col-md-3 sample-img">
+        <div class="card bg-dark text-white trending">
+          <img src="sample.png" class="card-img trending" alt="...">
+          <div class="card-img-overlay trending-text-all">
+            <h5 class="card-title trending-title">Title</h5>
+            <p class="card-text trending-text">A breif introduction of the topic.</p>
+            <div class="row no-margin">
+              <img src="smile.png" class="trending-group-img" alt="">
+              <p class="card-text trending-group">Name of group</p>
             </div>
-            <div class="row forum-info">
-              <p class="forum-info member-cnt">0 Members</p>
-            </div>
-          </div>
-          <div class="col-5">
-            <a class="btn btn-primary forum-btn" href="#" role="button">Join</a>
           </div>
         </div>
-
-        <div class="row subforum">
-          <div class="col-1 forum-info">
-            <img src="smile.png" class="forum-img" alt="">
-          </div>
-          <div class="col-6 name-cnt">
-            <div class="row forum-info">
-              <p class="forum-info forum-name">Subforum1</p>
-            </div>
-            <div class="row forum-info">
-              <p class="forum-info member-cnt">0 Members</p>
-            </div>
-          </div>
-          <div class="col-5">
-            <a class="btn btn-primary forum-btn" href="#" role="button">Join</a>
-          </div>
-        </div>
-
-        <div class="row subforum">
-          <div class="col-1 forum-info">
-            <img src="smile.png" class="forum-img" alt="">
-          </div>
-          <div class="col-6 name-cnt">
-            <div class="row forum-info">
-              <p class="forum-info forum-name">Subforum1</p>
-            </div>
-            <div class="row forum-info">
-              <p class="forum-info member-cnt">0 Members</p>
-            </div>
-          </div>
-          <div class="col-5">
-            <a class="btn btn-primary forum-btn" href="#" role="button">Join</a>
-          </div>
-        </div>
-        
       </div>
     </div>
   </div>
+
+  <div class="container main-section">
+    <div class="row">
+      <p class="main-header">Popular posts</p>
+    </div>
+    <div class="row">
+      <div class="col-md-8 ">
+        <ul class="nav nav-pills mb-3 bg-white px-2 py-2 components sections" id="pills-tab" role="tablist">
+          <li class="nav-item section-btn" role="presentation"><a class="nav-link active section-text" id="pills-profile-tab" data-toggle="pill" href="#pills-popular" role="tab" aria-controls="pills-profile" aria-selected="true"><i
+                class="fas fa-fire"></i>Popular</a></li>
+          <li class="nav-item dropdown-btn" role="presentation">
+            <div class="dropdown">
+              <button class="btn dropdown-toggle dropdown-btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                UAE <i class="fas fa-caret-down"></i>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Country name</a>
+                <a class="dropdown-item" href="#">Country name</a>
+                <a class="dropdown-item" href="#">Country name</a>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item section-btn" role="presentation"><a class="nav-link section-text" id="pills-home-tab" data-toggle="pill" href="#pills-latest" role="tab" aria-controls="pills-home" aria-selected="false"><i
+                class="fas fa-clock"></i>Latest</a></li>
+          <li class="nav-item section-btn" role="presentation"><a class="nav-link section-text" id="pills-home-tab" data-toggle="pill" href="#pills-controversial" role="tab" aria-controls="pills-home" aria-selected="false"><i
+                class="fas fa-exclamation"></i>Controversial</a>
+          </li>
+          <div class="dropdown">
+            <button class="btn dropdown-toggle section-btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              •••
+            </button>
+            <div class="dropdown-menu more-sections" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#"><i class="fas fa-user"></i>For You</a>
+              <a class="dropdown-item" href="#"><i class="fas fa-newspaper"></i>World News</a>
+              <a class="dropdown-item" href="#"><i class="fas fa-landmark"></i>Politics</a>
+            </div>
+          </div>
+          <li class="nav-item ml-auto section-btn" role="presentation"><a class="nav-link section-text" id="pills-home-tab" data-toggle="pill" href="#pills-raw" role="tab" aria-controls="pills-home" aria-selected="false">Raw</a></li>
+
+        </ul>
+
+        <div class="posts components">
+          <div class="row post-all-sections">
+
+            <div class="col-md-1 posts-upvote-section">
+              <i class="fas fa-sort-up vote"></i>
+              <p>14.3k</p>
+              <i class="fas fa-sort-down vote"></i>
+            </div>
+
+            <div class="col-md-11 posts-main-section">
+              <div class="row post-header">
+
+                <img src="smile.png" class="post-group-img" alt="">
+
+                <a href="#" class="post-group">Name of group</a>
+                <p class="post-info">• Posted by u/royalewrice 11 hours ago</p>
+                <a href="#"><span class="btn post-join-btn" href="#">+JOIN</span></a>
+
+              </div>
+              <div class="row post-body">
+                <p class="post-text">When Reddit gets content from 9GAG</p>
+                <img src="feel.jpg" alt="">
+              </div>
+              <div class="row post-footer">
+                <button type="button" class="btn"><i class="fas fa-comment-alt"></i>302 Comments</button>
+                <button type="button" class="btn"><i class="fas fa-share"></i>Share</button>
+                <button type="button" class="btn"><i class="fas fa-bookmark"></i>Save</button>
+                <button type="button" class="btn">•••</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <!-- blockchain stats section -->
+        <div class="card-body components">
+          <h5 class="card-title blockchain">Blockchain Statistics</h5>
+          <div>
+            <ul class="list-group mb-3 blockchain-component">
+              <li class="text-small list-group-item d-flex justify-content-between align-items-center blockchain-detail">Height: <strong>50950</strong></li>
+              <li class="list-group-item d-flex justify-content-between align-items-center blockchain-detail"><small class="overflow-auto blockchain-detail">Block #50950 &lt;9bd6dca24cfb64791381b782d9cf75c6e2c78cacccf0b73216824bc74198c01c&gt;</small>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center blockchain-detail">Forks: <strong>1</strong></li><a href="/explorer" class="blockchain-link"><span class="btn btn-block mt-3 blockchain-btn">BLOCKCHAIN
+                  EXPLORER</span></a>
+            </ul>
+          </div>
+        </div>
+
+        <!-- trending communities section -->
+        <div class="card-body components subforums">
+          <h5 class="card-title trending-header">Trending Communities</h5>
+          <div class="subforum-collection">
+            <div class="row subforum">
+              <div class="col-1 forum-info">
+                <img src="smile.png" class="forum-img" alt="">
+              </div>
+              <div class="col-6 name-cnt">
+                <div class="row forum-info">
+                  <p class="forum-info forum-name">Subforum1</p>
+                </div>
+                <div class="row forum-info">
+                  <p class="forum-info member-cnt">0 Members</p>
+                </div>
+              </div>
+              <div class="col-5">
+                <a class="btn btn-primary forum-btn" href="#" role="button">JOIN</a>
+              </div>
+            </div>
+
+            <div class="row subforum">
+              <div class="col-1 forum-info">
+                <img src="smile.png" class="forum-img" alt="">
+              </div>
+              <div class="col-6 name-cnt">
+                <div class="row forum-info">
+                  <p class="forum-info forum-name">Subforum1</p>
+                </div>
+                <div class="row forum-info">
+                  <p class="forum-info member-cnt">0 Members</p>
+                </div>
+              </div>
+              <div class="col-5">
+                <a class="btn btn-primary forum-btn" href="#" role="button">JOIN</a>
+              </div>
+            </div>
+
+            <div class="row subforum">
+              <div class="col-1 forum-info">
+                <img src="smile.png" class="forum-img" alt="">
+              </div>
+              <div class="col-6 name-cnt">
+                <div class="row forum-info">
+                  <p class="forum-info forum-name">Subforum1</p>
+                </div>
+                <div class="row forum-info">
+                  <p class="forum-info member-cnt">0 Members</p>
+                </div>
+              </div>
+              <div class="col-5">
+                <a class="btn btn-primary forum-btn" href="#" role="button">JOIN</a>
+              </div>
+            </div>
+
+            <div class="row subforum">
+              <div class="col-1 forum-info">
+                <img src="smile.png" class="forum-img" alt="">
+              </div>
+              <div class="col-6 name-cnt">
+                <div class="row forum-info">
+                  <p class="forum-info forum-name">Subforum1</p>
+                </div>
+                <div class="row forum-info">
+                  <p class="forum-info member-cnt">0 Members</p>
+                </div>
+              </div>
+              <div class="col-5">
+                <a class="btn btn-primary forum-btn" href="#" role="button">JOIN</a>
+              </div>
+            </div>
+
+            <div class="row subforum">
+              <div class="col-1 forum-info">
+                <img src="smile.png" class="forum-img" alt="">
+              </div>
+              <div class="col-6 name-cnt">
+                <div class="row forum-info">
+                  <p class="forum-info forum-name">Subforum1</p>
+                </div>
+                <div class="row forum-info">
+                  <p class="forum-info member-cnt">0 Members</p>
+                </div>
+              </div>
+              <div class="col-5">
+                <a class="btn btn-primary forum-btn" href="#" role="button">JOIN</a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 
   <script src="https://kit.fontawesome.com/6fad3641f2.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
